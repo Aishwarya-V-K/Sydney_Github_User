@@ -1,8 +1,7 @@
 import requests
 import csv
 
-# Replace 'YOUR_PERSONAL_ACCESS_TOKEN' with your actual GitHub token
-token = 'YOUR_PERSONAL_ACCESS_TOKEN'
+token = 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
 headers = {'Authorization': f'token {token}'}
 url = 'https://api.github.com/search/users?q=location:Sydney+followers:>100'
 
