@@ -70,4 +70,3 @@ if response.status_code == 200:
 
 else:
     print('Failed to retrieve users:', response_json.get('message', 'No error message'))
-        writer.writerows(repositories)
