@@ -1,7 +1,7 @@
 import requests
 import csv
 
-token = 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
+token = "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"
 headers = {'Authorization': f'token {token}'}
 url = 'https://api.github.com/search/users?q=location:Sydney+followers:>100'
 
