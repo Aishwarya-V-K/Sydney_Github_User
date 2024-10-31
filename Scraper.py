@@ -10,7 +10,7 @@ response = requests.get(url, headers=headers)
 
 # Print the response status code and JSON for debugging
 print(f'Status Code: {response.status_code}')
-print('Response JSON:', response.json())
+print('Response JSON:', response.json)
 
 # Check if the request was successful
 if response.status_code == 200:
@@ -66,6 +66,10 @@ if response.status_code == 200:
     with open('repositories.csv', mode='w', newline='') as file:
         writer = csv.DictWriter(file, fieldnames=repositories[0].keys())
         writer.writeheader()
+        writer.writerows(repositories)
+
+else:
+    print('Failed to retrieve users:', response_json.get('message', 'No error message'))
         writer.writerows(repositories)
 
 else:
